@@ -1,0 +1,384 @@
+/* *****GENERAL RULES***** */
+
+body{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+h1 {
+    font-family: "Merienda One", cursive;
+    align-self: end;
+
+}
+.start-grid h1 {
+    font-size: 4.5vw;
+}
+.sub-grid h1 {
+    font-size: 3.5vw;
+
+}
+h1::first-letter {
+    color: #00AF64;
+}
+h1 > span {
+    color: #A62F00;
+}
+.logo {
+    width: 100%;
+    height: auto;
+}
+.footer{
+    grid-area: footer;
+    color: #999;
+    align-self: center;
+}
+
+/* *****Startpage***** */
+
+.start-grid{
+    height: 100vh;
+    max-width: 860px;
+    margin: auto;
+    display: grid;
+    grid-template: 
+        "himg header header header" 30%
+        "tag tag tag tag" 75px
+        "menu menu menu menu" 1fr
+        "footer footer footer footer" 25%
+        / 1fr 1fr 1fr 1fr; 
+}
+.himg{
+    grid-area: himg;
+    justify-self: center;
+    align-self: center;
+}
+.header {
+    grid-area: header;
+    justify-self: center;
+    align-self: end;
+}
+.tagline {
+    grid-area: tag;
+    font-size: 120%;
+    border-top: 3px double #00AF64;
+    border-bottom: 3px double #00AF64;
+}
+.start-menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    align-self: start;
+    gap: 20px;
+}
+
+
+
+/* ****************MENU**************** */
+
+.menu > li, .menu > h2{
+    margin: 0 0 1rem;
+    padding: 2rem 0;
+    background-color: #F5F5F5;
+    text-align: center;
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+    font-family: "Merienda One", cursive;
+}
+.menu a:link, .menu a:visited {
+    text-decoration: none;
+    color: #000;
+}
+.menu a:focus, .menu a:hover {
+    text-decoration: underline;
+    color: #A62F00;
+}
+.menu a:active {
+    text-decoration: underline;
+    color: #FF4900;
+}
+.menu {
+    margin: 1em 0;
+    padding: 0;
+}
+.menu li {
+    margin: 0 0 1rem;
+    list-style: none;
+}
+
+/* *****Subpages***** */
+
+.sub-grid {
+    height: 100vh;
+    max-width: 860px;
+    margin: auto;
+    display: grid;
+    grid-template: 
+        "himg header header header" 30%
+        "tag tag tag tag" 75px
+        "nav article article article" 1fr
+        "footer footer footer footer" 100px
+        / 1fr 1fr 1fr 1fr; 
+}
+.subpage .header {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+}
+.nav {
+    grid-area: nav;
+    padding-right: 1em;
+}
+.article {
+    grid-area: article;
+}
+
+/* *****Article***** */
+
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+article{
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 3px double #00af64;
+}
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+figure {
+    float: left;
+    margin: 0;
+}
+figure img {
+    width: 128px;
+    height: 128px;
+}
+figcaption {
+    font: italic bolder 110% sans-serif;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+article p {
+    margin-left: 140px;
+    hyphens: auto;
+}
+
+/* *****slider***** */
+
+.nivo-caption {
+    text-align: center;
+}
+.slider {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/* *****List***** */
+
+table {
+    border-spacing: 0;
+    border: 1px solid #d3d3d3;
+    width: 96%;
+    margin: 1em auto 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+thead {
+    font-size: 150%;
+    text-shadow: #fff 1px 1px 1px;
+}
+th, td {
+    padding: 1.1rem 1.8rem 1.1rem;
+}
+th {
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+td {
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+th:not(last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+tr:target {
+    background-color: #61d7a4;
+}
+tr:hover{
+    background-color: #ff9b73;
+}
+tr {
+    transition: background-color 1s;
+}
+td:nth-child(1){
+    width: 50px;
+}
+td:nth-child(2){
+    width: 50px;
+}
+
+/* *****Blog***** */
+
+
+/* *****Contact***** */
+
+fieldset {
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+legend{
+    font-size: larger;
+}
+form p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+label {
+    flex: 0 1 10ch;
+    text-align: right;
+    padding-right: 1ch;
+}
+.reqfield {
+    flex: 0 0 2ch;
+    order: 1;
+    text-align: center;
+    padding-right: 0;
+}
+input[type=text], input[type=email], textarea {
+    flex: 1 1 25ch;
+    max-width: 300px;
+}
+textarea {
+    height: 5em;
+    resize: vertical;
+}
+input[type="submit"] {
+    display: block;
+    margin: auto;
+}
+
+/* *****Media query***** */
+
+.tagline button {
+    display: none;
+}
+
+@media (max-width: 700px){
+    .start-grid {
+        height: 100vh;
+        max-width: 860px;
+        margin: auto;
+        display: grid;
+        grid-template: 
+            "himg himg himg himg" 1fr
+            "header header header header" 1fr
+            "tag tag tag tag" 75px
+            "menu menu menu menu" 1fr
+            "footer footer footer footer" 100px
+            / 1fr 1fr 1fr 1fr; 
+    }
+    .startpage .logo{
+        width: 157px;
+        height: 132px;
+        justify-self: center;
+        align-self: end;
+    }
+    .startpage h1, .subpage h1 {
+        font-size: 175%;
+    }
+    .sub-grid {    
+        height: 100vh;
+        max-width: 860px;
+        margin: auto;
+        display: grid;
+        grid-template: 
+            "himg himg himg himg" 1fr
+            "header header header header" 1fr
+            "tag tag tag tag" 75px
+            "nav article article article" 1fr
+            "footer footer footer footer" 100px
+        / 1fr 1fr 1fr 1fr; 
+    }
+    .sub-grid .logo {
+        width: 157px;
+        height: 132px;
+        justify-self: center;
+        align-self: end;
+    }
+    p.tagline {
+        font-size: 400%;
+    }
+}
+
+@media (max-width: 550px){
+
+    .sub-grid {
+        height: 100vh;
+        max-width: 860px;
+        margin: auto;
+        display: grid;
+        grid-template: 
+            "himg himg himg himg" 1fr
+            "header header header header" 1fr
+            "tag tag tag tag" 75px
+            "nav nav nav nav" 1fr
+            "article article article article" 1fr
+            "footer footer footer footer" 100px
+            / 1fr 1fr 1fr 1fr; 
+        }
+
+    .subpage .tagline {
+        margin: 0.5em 0 0.2em;
+        text-align: right;
+    }
+    .tagline button {
+        display: inline;
+    }
+    .menu > li {
+        margin: 0 0 0.2em;
+        padding: 0.4em 0;
+        box-shadow: inset 0 0 10px #007241;
+        border-radius: 1em;
+    }
+    .subpage .menu {
+        margin: 0 0.1em;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
+    .menu.show {
+        max-height: 165px;
+        min-width: none;
+    }
+    .nav {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    figure {
+        float: none;
+        text-align: center;
+    }
+    figcaption {
+        width: 116px;
+        margin: auto;
+    }
+    article p {
+        margin-left: 0;
+    }
+    label {
+        flex: 0 0 auto;
+        text-align: left;
+        padding-right: 0;
+    }
+}
