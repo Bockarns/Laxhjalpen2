@@ -41,7 +41,7 @@ h1 > span {
     margin: auto;
     display: grid;
     grid-template: 
-        "himg header header header" 30%
+        "himg header header header" 250px
         "tag tag tag tag" 75px
         "menu menu menu menu" 1fr
         "footer footer footer footer" 25%
@@ -54,8 +54,8 @@ h1 > span {
 }
 .header {
     grid-area: header;
-    justify-self: center;
-    align-self: end;
+    justify-self: start;
+    align-self: center;
 }
 .tagline {
     grid-area: tag;
@@ -66,12 +66,12 @@ h1 > span {
 .start-menu {
     grid-area: menu;
     display: grid;
+    max-width: 860px;
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-    align-self: start;
-    gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+
 }
-
-
 
 /* ****************MENU**************** */
 
@@ -113,7 +113,7 @@ h1 > span {
     margin: auto;
     display: grid;
     grid-template: 
-        "himg header header header" 30%
+        "himg header header header" 250px
         "tag tag tag tag" 75px
         "nav article article article" 1fr
         "footer footer footer footer" 100px
@@ -269,6 +269,31 @@ input[type="submit"] {
 .tagline button {
     display: none;
 }
+button, .btn{
+    background: #00af64;
+    background-image: -webkit-linear-gradient(top, #00af64, #61d7a4);
+    background-image: -moz-linear-gradient(top, #00af64, #61d7a4);
+    background-image: -ms-linear-gradient(top, #00af64, #61d7a4);
+    background-image: -o-linear-gradient(top, #00af64, #61d7a4);
+    background-image: linear-gradient(to bottom, #00af64, #61d7a4);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+}      
+button:hover, .btn:hover {
+    background: #61d7a4;
+    background-image: -webkit-linear-gradient(top, #61d7a4, #00af64);
+    background-image: -moz-linear-gradient(top, #61d7a4, #00af64);
+    background-image: -ms-linear-gradient(top, #61d7a4, #00af64);
+    background-image: -o-linear-gradient(top, #61d7a4, #00af64);
+    background-image: linear-gradient(to bottom, #61d7a4, #00af64);
+    text-decoration: none; 
+}
 
 @media (max-width: 700px){
     .start-grid {
@@ -284,6 +309,12 @@ input[type="submit"] {
             "footer footer footer footer" 100px
             / 1fr 1fr 1fr 1fr; 
     }
+    .header {
+        grid-area: header;
+        justify-self: center;
+        align-self: center;
+    }
+
     .startpage .logo{
         width: 157px;
         height: 132px;
@@ -291,7 +322,7 @@ input[type="submit"] {
         align-self: end;
     }
     .startpage h1, .subpage h1 {
-        font-size: 175%;
+        font-size: 200%;
     }
     .sub-grid {    
         height: 100vh;
