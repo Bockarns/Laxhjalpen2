@@ -66,11 +66,11 @@ h1 > span {
 .start-menu {
     grid-area: menu;
     display: grid;
+    margin-top: 20%;
     max-width: 860px;
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
     column-gap: 20px;
-    align-items: center;
-
+    align-items: start;
 }
 
 /* ****************MENU**************** */
