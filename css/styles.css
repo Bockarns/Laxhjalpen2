@@ -11,10 +11,10 @@ h1 {
 
 }
 .start-grid h1 {
-    font-size: 4.5vw;
+    font-size: 4vw;
 }
 .sub-grid h1 {
-    font-size: 3.5vw;
+    font-size: 3vw;
 
 }
 h1::first-letter {
